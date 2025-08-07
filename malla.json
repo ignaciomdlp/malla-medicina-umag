@@ -1,113 +1,62 @@
 [
-  {
-    "asignatura": "ANATOMIA I",
-    "requisitos": []
-  },
-  {
-    "asignatura": "BASES CELULARES DE LA VIDA",
-    "requisitos": []
-  },
-  {
-    "asignatura": "BASES DE FISICA PARA MEDICINA",
-    "requisitos": []
-  },
-  {
-    "asignatura": "BASES DE QUIMICA GENERAL Y ORGÁNICA",
-    "requisitos": []
-  },
-  {
-    "asignatura": "BASES MATEMATICAS PARA MEDICINA",
-    "requisitos": []
-  },
-  {
-    "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I",
-    "requisitos": []
-  },
-  {
-    "asignatura": "SALUD PUBLICA Y GESTION I",
-    "requisitos": []
-  },
-  {
-    "asignatura": "ANATOMIA II",
-    "requisitos": ["ANATOMIA I"]
-  },
-  {
-    "asignatura": "BIOQUIMICA I",
-    "requisitos": [
-      "BASES DE QUIMICA GENERAL Y ORGÁNICA",
-      "BASES MATEMATICAS PARA MEDICINA",
-      "BASES CELULARES DE LA VIDA"
-    ]
-  },
-  {
-    "asignatura": "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
-    "requisitos": ["BASES CELULARES DE LA VIDA"]
-  },
-  {
-    "asignatura": "INGLES I",
-    "requisitos": []
-  },
-  {
-    "asignatura": "SALUD PUBLICA Y GESTION II",
-    "requisitos": ["SALUD PUBLICA Y GESTION I"]
-  },
-  {
-    "asignatura": "BIOQUIMICA II",
-    "requisitos": ["BIOQUIMICA I"]
-  },
-  {
-    "asignatura": "FISIOLOGIA I",
-    "requisitos": [
-      "ANATOMIA II",
-      "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
-      "BIOQUIMICA I",
-      "BASES DE FISICA PARA MEDICINA"
-    ]
-  },
-  {
-    "asignatura": "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS",
-    "requisitos": [
-      "BIOQUIMICA I",
-      "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
-      "BASES CELULARES DE LA VIDA"
-    ]
-  },
-  {
-    "asignatura": "INGLES II",
-    "requisitos": ["INGLES I"]
-  },
-  {
-    "asignatura": "TECNICAS Y PROCEDIMIENTOS I",
-    "requisitos": [
-      "ANATOMIA II",
-      "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR"
-    ]
-  },
-  {
-    "asignatura": "BASES DE LA INMUNOLOGÍA",
-    "requisitos": [
-      "BASES CELULARES DE LA VIDA",
-      "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS"
-    ]
-  },
-  {
-    "asignatura": "COMUNICACION Y RELACION CLINICA",
-    "requisitos": ["FUNDAMENTOS HUMANISTAS DE LA MEDICINA I"]
-  },
-  {
-    "asignatura": "FISIOLOGÍA II",
-    "requisitos": ["FISIOLOGIA I"]
-  },
-  {
-    "asignatura": "INGLES III",
-    "requisitos": ["INGLES II"]
-  },
-  {
-    "asignatura": "SALUD PUBLICA Y GESTION III",
-    "requisitos": ["SALUD PUBLICA Y GESTION II"]
-  },
-  {
-    "asignatura": "TECNICAS Y PROCEDIMIENTOS II",
-    "requisitos": ["TECNICAS Y PROCEDIMIENTOS I"]
-  }
+  { "asignatura": "ANATOMIA I", "requisitos": [] },
+  { "asignatura": "BASES CELULARES DE LA VIDA", "requisitos": [] },
+  { "asignatura": "BASES DE FISICA PARA MEDICINA", "requisitos": [] },
+  { "asignatura": "BASES DE QUIMICA GENERAL Y ORGÁNICA", "requisitos": [] },
+  { "asignatura": "BASES MATEMATICAS PARA MEDICINA", "requisitos": [] },
+  { "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I", "requisitos": [] },
+  { "asignatura": "SALUD PUBLICA Y GESTION I", "requisitos": [] },
+
+  { "asignatura": "ANATOMIA II", "requisitos": ["ANATOMIA I"] },
+  { "asignatura": "BIOQUIMICA I", "requisitos": [
+    "BASES DE QUIMICA GENERAL Y ORGÁNICA",
+    "BASES MATEMATICAS PARA MEDICINA",
+    "BASES CELULARES DE LA VIDA"
+  ]},
+  { "asignatura": "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR", "requisitos": ["BASES CELULARES DE LA VIDA"] },
+  { "asignatura": "INGLES I", "requisitos": [] },
+  { "asignatura": "SALUD PUBLICA Y GESTION II", "requisitos": ["SALUD PUBLICA Y GESTION I"] },
+
+  { "asignatura": "BASES DE LA INVESTIGACION BIOMEDICA", "requisitos": [
+    "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I",
+    "BASES MATEMATICAS PARA MEDICINA"
+  ]},
+  { "asignatura": "BIOQUIMICA II", "requisitos": ["BIOQUIMICA I"] },
+  { "asignatura": "FISIOLOGIA I", "requisitos": [
+    "ANATOMIA II",
+    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
+    "BIOQUIMICA I",
+    "BASES DE FISICA PARA MEDICINA"
+  ]},
+  { "asignatura": "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS", "requisitos": [
+    "BIOQUIMICA I",
+    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
+    "BASES CELULARES DE LA VIDA"
+  ]},
+  { "asignatura": "INGLES II", "requisitos": ["INGLES I"] },
+  { "asignatura": "PASANTIA ACADEMICA", "requisitos": [] },
+  { "asignatura": "TECNICAS Y PROCEDIMIENTOS I", "requisitos": [
+    "ANATOMIA II",
+    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR"
+  ]},
+
+  { "asignatura": "BASES DE LA INMUNOLOGÍA", "requisitos": [
+    "BASES CELULARES DE LA VIDA",
+    "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS"
+  ]},
+  { "asignatura": "COMUNICACION Y RELACION CLINICA", "requisitos": ["FUNDAMENTOS HUMANISTAS DE LA MEDICINA I"] },
+  { "asignatura": "FISIOLOGÍA II", "requisitos": ["FISIOLOGIA I"] },
+  { "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA II", "requisitos": ["FUNDAMENTOS HUMANISTAS DE LA MEDICINA I"] },
+  { "asignatura": "INGLES III", "requisitos": ["INGLES II"] },
+  { "asignatura": "SALUD PUBLICA Y GESTION III", "requisitos": ["SALUD PUBLICA Y GESTION II"] },
+  { "asignatura": "TECNICAS Y PROCEDIMIENTOS II", "requisitos": ["TECNICAS Y PROCEDIMIENTOS I"] },
+
+  { "asignatura": "BASES DE LA TERAPEUTICA BASICA Y CLINICA I", "requisitos": [
+    "BIOQUIMICA II", "BASES DE LA INMUNOLOGÍA", "FISIOLOGÍA II"
+  ]},
+  { "asignatura": "INGLES IV", "requisitos": ["INGLES III"] },
+  { "asignatura": "LECTURA CRÍTICA Y MEDICINA BASADA EN LA EVIDENCIA", "requisitos": ["BASES DE LA INVESTIGACION BIOMEDICA"] },
+  { "asignatura": "MEDICINA INTEGRATIVA", "requisitos": ["COMUNICACION Y RELACION CLINICA"] },
+  { "asignatura": "MICROBIOLOGÍA GENERAL", "requisitos": ["BIOQUIMICA II", "BASES DE LA INMUNOLOGÍA"] },
+  { "asignatura": "PATOLOGÍA GENERAL I", "requisitos": ["FISIOLOGÍA II", "BASES DE LA INMUNOLOGÍA"] }
 ]
