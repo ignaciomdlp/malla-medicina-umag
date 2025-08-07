@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Malla Interactiva - Medicina</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Malla Medicina UMAG Interactiva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Malla Interactiva - Medicina</h1>
-    <div id="grafico"></div>
+  <header>
+    <h1>Malla Interactiva de Medicina</h1>
+    <div id="progreso-container">
+      <span>Progreso:</span>
+      <div id="barra">
+        <div id="barra-avance"></div>
+      </div>
+      <span id="porcentaje">0%</span>
+    </div>
+  </header>
 
-    <!-- Librería D3.js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="script.js"></script>
+  <main>
+    <div id="malla"></div>
+  </main>
+
+  <footer>
+    <p>Creado por Matus 💖</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
