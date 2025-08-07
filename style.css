@@ -1,22 +1,99 @@
+/* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fce4ec; /* rosado pastel */
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+}
+
+/* Header */
+header {
+  background-color: #f8bbd0; /* rosa más fuerte */
+  padding: 20px;
+  text-align: center;
+  color: #880e4f;
 }
 
 h1 {
-    background-color: #003366;
-    color: white;
-    margin: 0;
-    padding: 20px 0;
+  margin: 0;
 }
 
-#grafico {
-    width: 100%;
-    height: 800px;
-    border: 1px solid #ccc;
-    background-color: white;
-    margin-top: 20px;
+/* Barra de progreso */
+#progreso-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#barra {
+  background-color: #fce4ec;
+  border: 1px solid #d81b60;
+  width: 200px;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#barra-avance {
+  height: 100%;
+  width: 0%;
+  background-color: #d81b60;
+  transition: width 0.3s ease-in-out;
+}
+
+#porcentaje {
+  font-weight: bold;
+}
+
+/* Malla de ramos */
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 30px;
+}
+
+/* Botones de ramos */
+.ramo {
+  background-color: #f8bbd0;
+  border: 2px solid #ec407a;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  font-weight: 600;
+}
+
+/* Estado: Aprobado */
+.ramo.aprobado {
+  background-color: #c8e6c9;
+  border-color: #388e3c;
+  color: #2e7d32;
+}
+
+/* Estado: Disponible */
+.ramo.disponible {
+  background-color: #ffe0f0;
+  border-color: #f06292;
+}
+
+/* Estado: Bloqueado */
+.ramo.bloqueado {
+  background-color: #f3f3f3;
+  border-color: #ccc;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+  background-color: #f8bbd0;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #880e4f;
 }
