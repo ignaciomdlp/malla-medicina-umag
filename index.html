@@ -2,24 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Medicina UMAG Interactiva</title>
+  <title>Malla Medicina Interactiva</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Malla Interactiva de Medicina</h1>
-    <div id="progreso-container">
-      <span>Progreso:</span>
-      <div id="barra">
-        <div id="barra-avance"></div>
-      </div>
-      <span id="porcentaje">0%</span>
+    <h1>Malla Interactiva - Medicina</h1>
+    <div class="stats">
+      <span id="total-ramos">Total ramos: 0</span>
+      <span id="aprobados">Aprobados: 0</span>
+      <span id="creditos">Créditos: 0/0</span>
+      <span id="progreso">Progreso: 0%</span>
+    </div>
+    <div id="barra-progreso">
+      <div id="avance"></div>
+    </div>
+    <div class="controles">
+      <button id="reiniciar">🔄 Reiniciar Progreso</button>
+      <button id="solo-disponibles">Solo Disponibles</button>
+      <input type="text" id="buscador" placeholder="Buscar ramo...">
+      <label class="switch">
+        <input type="checkbox" id="modo-oscuro">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div id="leyenda">
+      <span class="leyenda aprobado">Aprobado</span>
+      <span class="leyenda disponible">Disponible</span>
+      <span class="leyenda bloqueado">Bloqueado</span>
     </div>
   </header>
 
-  <main>
-    <div id="malla"></div>
-  </main>
+  <main id="malla"></main>
 
   <footer>
     <p>Creado por Matus 💖</p>
