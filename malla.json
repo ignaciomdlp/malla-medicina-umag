@@ -1,62 +1,616 @@
 [
-  { "asignatura": "ANATOMIA I", "requisitos": [] },
-  { "asignatura": "BASES CELULARES DE LA VIDA", "requisitos": [] },
-  { "asignatura": "BASES DE FISICA PARA MEDICINA", "requisitos": [] },
-  { "asignatura": "BASES DE QUIMICA GENERAL Y ORGÁNICA", "requisitos": [] },
-  { "asignatura": "BASES MATEMATICAS PARA MEDICINA", "requisitos": [] },
-  { "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I", "requisitos": [] },
-  { "asignatura": "SALUD PUBLICA Y GESTION I", "requisitos": [] },
-
-  { "asignatura": "ANATOMIA II", "requisitos": ["ANATOMIA I"] },
-  { "asignatura": "BIOQUIMICA I", "requisitos": [
-    "BASES DE QUIMICA GENERAL Y ORGÁNICA",
-    "BASES MATEMATICAS PARA MEDICINA",
-    "BASES CELULARES DE LA VIDA"
-  ]},
-  { "asignatura": "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR", "requisitos": ["BASES CELULARES DE LA VIDA"] },
-  { "asignatura": "INGLES I", "requisitos": [] },
-  { "asignatura": "SALUD PUBLICA Y GESTION II", "requisitos": ["SALUD PUBLICA Y GESTION I"] },
-
-  { "asignatura": "BASES DE LA INVESTIGACION BIOMEDICA", "requisitos": [
-    "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I",
-    "BASES MATEMATICAS PARA MEDICINA"
-  ]},
-  { "asignatura": "BIOQUIMICA II", "requisitos": ["BIOQUIMICA I"] },
-  { "asignatura": "FISIOLOGIA I", "requisitos": [
-    "ANATOMIA II",
-    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
-    "BIOQUIMICA I",
-    "BASES DE FISICA PARA MEDICINA"
-  ]},
-  { "asignatura": "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS", "requisitos": [
-    "BIOQUIMICA I",
-    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
-    "BASES CELULARES DE LA VIDA"
-  ]},
-  { "asignatura": "INGLES II", "requisitos": ["INGLES I"] },
-  { "asignatura": "PASANTIA ACADEMICA", "requisitos": [] },
-  { "asignatura": "TECNICAS Y PROCEDIMIENTOS I", "requisitos": [
-    "ANATOMIA II",
-    "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR"
-  ]},
-
-  { "asignatura": "BASES DE LA INMUNOLOGÍA", "requisitos": [
-    "BASES CELULARES DE LA VIDA",
-    "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS"
-  ]},
-  { "asignatura": "COMUNICACION Y RELACION CLINICA", "requisitos": ["FUNDAMENTOS HUMANISTAS DE LA MEDICINA I"] },
-  { "asignatura": "FISIOLOGÍA II", "requisitos": ["FISIOLOGIA I"] },
-  { "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA II", "requisitos": ["FUNDAMENTOS HUMANISTAS DE LA MEDICINA I"] },
-  { "asignatura": "INGLES III", "requisitos": ["INGLES II"] },
-  { "asignatura": "SALUD PUBLICA Y GESTION III", "requisitos": ["SALUD PUBLICA Y GESTION II"] },
-  { "asignatura": "TECNICAS Y PROCEDIMIENTOS II", "requisitos": ["TECNICAS Y PROCEDIMIENTOS I"] },
-
-  { "asignatura": "BASES DE LA TERAPEUTICA BASICA Y CLINICA I", "requisitos": [
-    "BIOQUIMICA II", "BASES DE LA INMUNOLOGÍA", "FISIOLOGÍA II"
-  ]},
-  { "asignatura": "INGLES IV", "requisitos": ["INGLES III"] },
-  { "asignatura": "LECTURA CRÍTICA Y MEDICINA BASADA EN LA EVIDENCIA", "requisitos": ["BASES DE LA INVESTIGACION BIOMEDICA"] },
-  { "asignatura": "MEDICINA INTEGRATIVA", "requisitos": ["COMUNICACION Y RELACION CLINICA"] },
-  { "asignatura": "MICROBIOLOGÍA GENERAL", "requisitos": ["BIOQUIMICA II", "BASES DE LA INMUNOLOGÍA"] },
-  { "asignatura": "PATOLOGÍA GENERAL I", "requisitos": ["FISIOLOGÍA II", "BASES DE LA INMUNOLOGÍA"] }
+  {
+    "grupo": "1° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "ANATOMIA I",
+        "sigla": "28066",
+        "creditos": 6,
+        "categoria": "Anatomía",
+        "requisitos": []
+      },
+      {
+        "asignatura": "BASES CELULARES DE LA VIDA",
+        "sigla": "28067",
+        "creditos": 5,
+        "categoria": "Biología",
+        "requisitos": []
+      },
+      {
+        "asignatura": "BASES DE FISICA PARA MEDICINA",
+        "sigla": "28046",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "BASES DE QUIMICA GENERAL Y ORGÁNICA",
+        "sigla": "28045",
+        "creditos": 7,
+        "categoria": "Biología",
+        "requisitos": []
+      },
+      {
+        "asignatura": "BASES MATEMATICAS PARA MEDICINA",
+        "sigla": "28020",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA I (ANUAL)",
+        "sigla": "28048",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "SALUD PUBLICA Y GESTION I",
+        "sigla": "28047",
+        "creditos": 2,
+        "categoria": "Salud Pública",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "1° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "ANATOMIA II",
+        "sigla": "28049",
+        "creditos": 6,
+        "categoria": "Anatomía",
+        "requisitos": [
+          "28066"
+        ]
+      },
+      {
+        "asignatura": "BIOQUIMICA I",
+        "sigla": "28051",
+        "creditos": 6,
+        "categoria": "Bioquímica",
+        "requisitos": [
+          "28045",
+          "28020",
+          "28067"
+        ]
+      },
+      {
+        "asignatura": "DESARROLLO EMBRIONARIO Y MORFOLOGIA TISULAR",
+        "sigla": "28050",
+        "creditos": 6,
+        "categoria": "Biología",
+        "requisitos": [
+          "28067"
+        ]
+      },
+      {
+        "asignatura": "INGLES I",
+        "sigla": "28053",
+        "creditos": 4,
+        "categoria": "Idiomas",
+        "requisitos": []
+      },
+      {
+        "asignatura": "SALUD PUBLICA Y GESTION II",
+        "sigla": "28052",
+        "creditos": 2,
+        "categoria": "Salud Pública",
+        "requisitos": [
+          "28047"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "2° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "BASES DE LA INVESTIGACION BIOMEDICA",
+        "sigla": "28060",
+        "creditos": 4,
+        "categoria": "Investigación",
+        "requisitos": [
+          "28048",
+          "28020"
+        ]
+      },
+      {
+        "asignatura": "BIOQUIMICA II",
+        "sigla": "28058",
+        "creditos": 4,
+        "categoria": "Bioquímica",
+        "requisitos": [
+          "28051"
+        ]
+      },
+      {
+        "asignatura": "FISIOLOGIA I",
+        "sigla": "28056",
+        "creditos": 6,
+        "categoria": "Fisiología",
+        "requisitos": [
+          "28049",
+          "28050",
+          "28051",
+          "28046"
+        ]
+      },
+      {
+        "asignatura": "FUNDAMENTOS DE LAS PATOLOGIAS GENETICAS",
+        "sigla": "28057",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28051",
+          "28050",
+          "28067"
+        ]
+      },
+      {
+        "asignatura": "INGLES II",
+        "sigla": "28075",
+        "creditos": 4,
+        "categoria": "Idiomas",
+        "requisitos": [
+          "28053"
+        ]
+      },
+      {
+        "asignatura": "PASANTIA ACADEMICA",
+        "sigla": "28062",
+        "creditos": 6,
+        "categoria": "Otros",
+        "requisitos": []
+      },
+      {
+        "asignatura": "TECNICAS Y PROCEDIMIENTOS I",
+        "sigla": "28069",
+        "creditos": 2,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28049",
+          "28050"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "2° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "BASES DE LA INMUNOLOGÍA",
+        "sigla": "28070",
+        "creditos": 5,
+        "categoria": "Inmunología",
+        "requisitos": [
+          "28067",
+          "28057"
+        ]
+      },
+      {
+        "asignatura": "COMUNICACION Y RELACION CLINICA",
+        "sigla": "28071",
+        "creditos": 5,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28048"
+        ]
+      },
+      {
+        "asignatura": "FISIOLOGÍA II",
+        "sigla": "28063",
+        "creditos": 6,
+        "categoria": "Fisiología",
+        "requisitos": [
+          "28056"
+        ]
+      },
+      {
+        "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA II",
+        "sigla": "28088",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28048"
+        ]
+      },
+      {
+        "asignatura": "INGLES III",
+        "sigla": "28074",
+        "creditos": 2,
+        "categoria": "Idiomas",
+        "requisitos": [
+          "28075"
+        ]
+      },
+      {
+        "asignatura": "SALUD PUBLICA Y GESTION III",
+        "sigla": "28072",
+        "creditos": 2,
+        "categoria": "Salud Pública",
+        "requisitos": [
+          "28052"
+        ]
+      },
+      {
+        "asignatura": "TECNICAS Y PROCEDIMIENTOS II",
+        "sigla": "28065",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28069"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "3° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "BASES DE LA TERAPEUTICA BASICA Y CLINICA I",
+        "sigla": "28078",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28058",
+          "28070",
+          "28063"
+        ]
+      },
+      {
+        "asignatura": "INGLES IV",
+        "sigla": "28081",
+        "creditos": 4,
+        "categoria": "Idiomas",
+        "requisitos": [
+          "28074"
+        ]
+      },
+      {
+        "asignatura": "LECTURA CRÍTICA Y MEDICINA BASADA EN LA EVIDENCIA",
+        "sigla": "28080",
+        "creditos": 5,
+        "categoria": "Investigación",
+        "requisitos": [
+          "28060"
+        ]
+      },
+      {
+        "asignatura": "MEDICINA INTEGRATIVA",
+        "sigla": "28079",
+        "creditos": 5,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28071"
+        ]
+      },
+      {
+        "asignatura": "MICROBIOLOGÍA GENERAL",
+        "sigla": "28077",
+        "creditos": 4,
+        "categoria": "Microbiología",
+        "requisitos": [
+          "28058",
+          "28070"
+        ]
+      },
+      {
+        "asignatura": "PATOLOGÍA GENERAL I",
+        "sigla": "28076",
+        "creditos": 6,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28063",
+          "28070"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "3° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "BASES DE LA TERAPEUTICA BASICA Y CLINICA II",
+        "sigla": "28083",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28078"
+        ]
+      },
+      {
+        "asignatura": "EPIDEMIOLOGIA CLINICA",
+        "sigla": "28086",
+        "creditos": 3,
+        "categoria": "Salud Pública",
+        "requisitos": [
+          "28072"
+        ]
+      },
+      {
+        "asignatura": "FUNDAMENTOS DE LA MEDICINA EN AMBIENTES EXTREMOS",
+        "sigla": "28084",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28063",
+          "28065"
+        ]
+      },
+      {
+        "asignatura": "FUNDAMENTOS HUMANISTAS DE LA MEDICINA III",
+        "sigla": "28087",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28088"
+        ]
+      },
+      {
+        "asignatura": "PATOLOGIA GENERAL II",
+        "sigla": "28082",
+        "creditos": 4,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28076"
+        ]
+      },
+      {
+        "asignatura": "SEMIOLOGIA",
+        "sigla": "28085",
+        "creditos": 10,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28063",
+          "28071"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "4° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "CLINICA CIRUGIA",
+        "sigla": "28091",
+        "creditos": 14,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "CLINICA MEDICINA INTERNA I",
+        "sigla": "28090",
+        "creditos": 14,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "SALUD PUBLICA Y GESTION IV",
+        "sigla": "28092",
+        "creditos": 2,
+        "categoria": "Salud Pública",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "4° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "CLINICA MEDICINA INTERNA II",
+        "sigla": "28093",
+        "creditos": 14,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28090"
+        ]
+      },
+      {
+        "asignatura": "INTEGRADO ESPECIALIDADES QUIRURGICAS",
+        "sigla": "28094",
+        "creditos": 14,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28091"
+        ]
+      },
+      {
+        "asignatura": "MEDICINA LEGAL",
+        "sigla": "28095",
+        "creditos": 2,
+        "categoria": "Clínica",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "5° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "CLINICA DERMATOLOGICA",
+        "sigla": "28099",
+        "creditos": 3,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093"
+        ]
+      },
+      {
+        "asignatura": "CLINICA NEUROLOGIA",
+        "sigla": "28097",
+        "creditos": 6,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093"
+        ]
+      },
+      {
+        "asignatura": "CLINICA PEDIATRIA",
+        "sigla": "28096",
+        "creditos": 14,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093",
+          "28094"
+        ]
+      },
+      {
+        "asignatura": "CLINICA PSIQUIATRÍA",
+        "sigla": "28098",
+        "creditos": 7,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "5° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "CLINICA OBSTETRICIA Y GINECOLOGIA",
+        "sigla": "28103",
+        "creditos": 10,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093",
+          "28091",
+          "28094"
+        ]
+      },
+      {
+        "asignatura": "CLINICA OFTALMOLOGIA",
+        "sigla": "28102",
+        "creditos": 3,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28091"
+        ]
+      },
+      {
+        "asignatura": "CLINICA OTORRINOLARINGOLOGÍA",
+        "sigla": "28101",
+        "creditos": 3,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28091"
+        ]
+      },
+      {
+        "asignatura": "MEDICINA FAMILIAR",
+        "sigla": "28100",
+        "creditos": 12,
+        "categoria": "Clínica",
+        "requisitos": [
+          "28093",
+          "28091",
+          "28094"
+        ]
+      },
+      {
+        "asignatura": "SALUD PUBLICA Y GESTION V",
+        "sigla": "28104",
+        "creditos": 2,
+        "categoria": "Salud Pública",
+        "requisitos": [
+          "28092",
+          "28093",
+          "28091"
+        ]
+      }
+    ]
+  },
+  {
+    "grupo": "6° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "INTERNADO ATENCION PRIMARIA URBANA Y RURAL",
+        "sigla": "28106",
+        "creditos": 20,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "INTERNADO MEDICINA INTERNA",
+        "sigla": "28105",
+        "creditos": 25,
+        "categoria": "Clínica",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "6° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "INTERNADO ELECTIVO I",
+        "sigla": "28108",
+        "creditos": 6,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "INTERNADO PEDIATRIA",
+        "sigla": "28107",
+        "creditos": 25,
+        "categoria": "Clínica",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "7° Año - 1° Semestre",
+    "ramos": [
+      {
+        "asignatura": "INTERNADO DE MEDICINA DE URGENCIA-EMERGENCIA",
+        "sigla": "28110",
+        "creditos": 20,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "INTERNADO OBSTETRICIA Y GINECOLOGIA",
+        "sigla": "28109",
+        "creditos": 25,
+        "categoria": "Clínica",
+        "requisitos": []
+      }
+    ]
+  },
+  {
+    "grupo": "7° Año - 2° Semestre",
+    "ramos": [
+      {
+        "asignatura": "INTERNADO CIRUGIA",
+        "sigla": "28111",
+        "creditos": 25,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "INTERNADO ELECTIVO II",
+        "sigla": "28112",
+        "creditos": 6,
+        "categoria": "Clínica",
+        "requisitos": []
+      },
+      {
+        "asignatura": "ELECTIVO DE FORMACION GENERAL I",
+        "sigla": "28054",
+        "creditos": 4,
+        "categoria": "Otros",
+        "requisitos": []
+      },
+      {
+        "asignatura": "ELECTIVO DE FORMACION GENERAL II",
+        "sigla": "28089",
+        "creditos": 3,
+        "categoria": "Otros",
+        "requisitos": []
+      }
+    ]
+  }
 ]
