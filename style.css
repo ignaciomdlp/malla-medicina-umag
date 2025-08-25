@@ -1,203 +1,177 @@
-/* ===== Estilos base ===== */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fce4ec;
-  color: #4a4a4a;
+/* ====== RESET BÁSICO ====== */
+* {
   margin: 0;
   padding: 0;
-  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
+body {
+  background: #fdebf3; /* rosado pastel */
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== CABECERA ====== */
 header {
-  background-color: #f8bbd0;
-  padding: 20px;
   text-align: center;
-  color: #880e4f;
+  padding: 1rem;
+  background: #f8c6d8;
+  border-bottom: 3px solid #f497b5;
 }
 
-h1 {
-  margin: 0;
+header h1 {
+  font-size: 1.8rem;
+  color: #5a2a3c;
 }
 
-/* ===== Stats ===== */
-.stats {
+.controls {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 10px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.controls input[type="text"] {
+  padding: 0.4rem;
+  border: 1px solid #f497b5;
+  border-radius: 6px;
+}
+
+.controls button,
+.controls label {
+  background: #f497b5;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
   font-weight: bold;
 }
 
-/* ===== Barra de progreso ===== */
-#barra-progreso {
-  background-color: #fce4ec;
-  border: 1px solid #ec407a;
-  width: 80%;
-  margin: 10px auto;
-  height: 20px;
-  border-radius: 10px;
+.controls button:hover {
+  background: #e67aa1;
+}
+
+/* ====== ESTADÍSTICAS ====== */
+.stats {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.barra-progreso {
+  background: #f1c6d8;
+  border-radius: 20px;
   overflow: hidden;
+  width: 80%;
+  height: 20px;
+  margin: 0.5rem auto;
 }
 
 #avance {
-  background-color: #d81b60;
+  background: #f497b5;
   height: 100%;
-  width: 0%;
-  transition: width 0.3s ease;
-}
-
-/* ===== Controles ===== */
-.controles {
-  margin: 10px auto;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.controles button,
-.controles input {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#reiniciar {
-  background-color: #f48fb1;
-}
-
-#solo-disponibles {
-  background-color: #f06292;
-  color: white;
-}
-
-#buscador {
-  border: 1px solid #ccc;
-}
-
-/* ===== Switch modo oscuro ===== */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 26px;
-}
-.switch input {
-  opacity: 0;
   width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 26px;
-}
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px; width: 20px;
-  left: 3px; bottom: 3px;
-  background-color: white;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-input:checked + .slider {
-  background-color: #d81b60;
-}
-input:checked + .slider:before {
-  transform: translateX(24px);
+  transition: width 0.5s;
 }
 
-/* ===== Leyenda ===== */
-#leyenda {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+/* ====== MALLA ====== */
+.grupo {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width: 1000px;
+  background: #fff0f6;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-.leyenda {
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-.aprobado { background-color: #c8e6c9; color: #2e7d32; }
-.disponible { background-color: #ffe0f0; color: #880e4f; }
-.bloqueado { background-color: #f3f3f3; color: #aaa; }
 
-/* ===== Malla ===== */
-#malla {
+.grupo h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #7a3e57;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
 }
-.semestre {
-  background-color: #f8bbd0;
-  border-radius: 10px;
-  padding: 15px;
-}
-.semestre h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  color: #880e4f;
-}
+
 .ramo {
-  background-color: #ffe0f0;
-  border: 2px solid #f06292;
-  border-radius: 8px;
-  padding: 8px;
-  margin-bottom: 8px;
-  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 10px;
   text-align: center;
-  font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
 }
-.ramo.aprobado {
-  background-color: #c8e6c9;
-  border-color: #388e3c;
-  color: #2e7d32;
+
+.ramo h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
 }
+
+/* ====== ESTADOS DE RAMOS ====== */
 .ramo.bloqueado {
-  background-color: #f3f3f3;
-  border-color: #ccc;
-  color: #aaa;
+  background: #f3d6e0;
+  color: #777;
+  border: 2px dashed #e1b6c4;
   cursor: not-allowed;
 }
 
-/* ===== Modo oscuro ===== */
+.ramo.disponible {
+  background: #fde2eb;
+  border: 2px solid #f497b5;
+  color: #5a2a3c;
+}
+
+.ramo.aprobado {
+  background: #d6f5d6;
+  border: 2px solid #4CAF50;
+  color: #2e5d2e;
+  text-decoration: line-through;
+}
+
+.ramo:hover {
+  transform: scale(1.05);
+}
+
+/* ====== MODO OSCURO ====== */
 body.dark {
-  background-color: #1c1c1c;
-  color: white;
+  background: #1e1e1e;
+  color: #eee;
 }
+
 body.dark header {
-  background-color: #333;
-  color: #fff;
+  background: #333;
+  border-bottom: 3px solid #555;
 }
-body.dark #barra-progreso {
-  background-color: #444;
-  border-color: #666;
+
+body.dark .grupo {
+  background: #2b2b2b;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.1);
 }
-body.dark #avance {
-  background-color: #ff80ab;
-}
-body.dark .semestre {
-  background-color: #333;
-}
-body.dark .ramo {
-  background-color: #555;
-  border-color: #888;
-}
-body.dark .ramo.aprobado {
-  background-color: #388e3c;
-  border-color: #2e7d32;
-  color: #fff;
-}
+
 body.dark .ramo.bloqueado {
-  background-color: #444;
-  border-color: #666;
+  background: #444;
+  border: 2px dashed #666;
   color: #999;
+}
+
+body.dark .ramo.disponible {
+  background: #333;
+  border: 2px solid #f497b5;
+  color: #f9c6d9;
+}
+
+body.dark .ramo.aprobado {
+  background: #2d4d2d;
+  border: 2px solid #4CAF50;
+  color: #9fdf9f;
+}
+
+body.dark .barra-progreso {
+  background: #555;
 }
