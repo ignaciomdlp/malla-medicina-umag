@@ -1,4 +1,4 @@
-/* ====== RESET BÁSICO ====== */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +7,12 @@
 }
 
 body {
-  background: #fdebf3; /* rosado pastel */
+  background: #fdebf3;
   color: #333;
   transition: background 0.3s, color 0.3s;
 }
 
-/* ====== CABECERA ====== */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 1rem;
@@ -21,43 +21,13 @@ header {
 }
 
 header h1 {
-  font-size: 1.8rem;
-  color: #5a2a3c;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.controls {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.controls input[type="text"] {
-  padding: 0.4rem;
-  border: 1px solid #f497b5;
-  border-radius: 6px;
-}
-
-.controls button,
-.controls label {
-  background: #f497b5;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-}
-
-.controls button:hover {
-  background: #e67aa1;
-}
-
-/* ====== ESTADÍSTICAS ====== */
 .stats {
-  text-align: center;
   margin: 1rem 0;
+  font-size: 1rem;
 }
 
 .barra-progreso {
@@ -65,8 +35,9 @@ header h1 {
   border-radius: 20px;
   overflow: hidden;
   width: 80%;
-  height: 20px;
+  height: 25px;
   margin: 0.5rem auto;
+  position: relative;
 }
 
 #avance {
@@ -76,13 +47,70 @@ header h1 {
   transition: width 0.5s;
 }
 
-/* ====== MALLA ====== */
-.grupo {
-  margin: 1.5rem auto;
+/* ===== CONTROLES ===== */
+.controles {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.controles input[type="text"] {
+  padding: 0.4rem;
+  border: 1px solid #f497b5;
+  border-radius: 6px;
+}
+
+/* ===== SWITCH OSCURO ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #f497b5;
+  border-radius: 34px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider img {
+  width: 18px;
+  height: 18px;
+}
+
+input:checked + .slider {
+  background-color: #444;
+}
+
+/* ===== MALLA ===== */
+#malla {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
   padding: 1rem;
-  max-width: 1000px;
+}
+
+.grupo {
+  flex: 0 0 250px;
   background: #fff0f6;
   border-radius: 12px;
+  padding: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -92,86 +120,68 @@ header h1 {
   color: #7a3e57;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
 .ramo {
-  padding: 0.8rem;
-  border-radius: 10px;
+  padding: 0.6rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
   text-align: center;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s;
 }
 
-.ramo h3 {
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
+.ramo:hover { transform: scale(1.05); }
+
+/* Estados */
+.ramo.bloqueado { background: #f3d6e0; border: 1px dashed #e1b6c4; color: #777; }
+.ramo.disponible { background: #fde2eb; border: 1px solid #f497b5; color: #5a2a3c; }
+.ramo.aprobado { background: #d6f5d6; border: 1px solid #4CAF50; color: #2e5d2e; text-decoration: line-through; }
+
+/* Categorías (pastillas de colores) */
+.categoria {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  color: white;
 }
 
-/* ====== ESTADOS DE RAMOS ====== */
-.ramo.bloqueado {
-  background: #f3d6e0;
-  color: #777;
-  border: 2px dashed #e1b6c4;
-  cursor: not-allowed;
+.cat-anatomia { background: #ff9999; }
+.cat-bioquimica { background: #ffcc99; }
+.cat-fisiologia { background: #99ccff; }
+.cat-clinica { background: #99ff99; }
+.cat-salud { background: #ffb3e6; }
+.cat-humanidades { background: #cccccc; }
+.cat-investigacion { background: #b366ff; }
+.cat-idiomas { background: #66cccc; }
+.cat-otros { background: #aaaaaa; }
+
+/* ===== LEYENDA ===== */
+#leyenda {
+  margin-top: 1rem;
 }
 
-.ramo.disponible {
-  background: #fde2eb;
-  border: 2px solid #f497b5;
-  color: #5a2a3c;
+.leyenda {
+  margin: 0 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
 }
 
-.ramo.aprobado {
-  background: #d6f5d6;
-  border: 2px solid #4CAF50;
-  color: #2e5d2e;
-  text-decoration: line-through;
+.leyenda.aprobado { background: #d6f5d6; border: 1px solid #4CAF50; }
+.leyenda.disponible { background: #fde2eb; border: 1px solid #f497b5; }
+.leyenda.bloqueado { background: #f3d6e0; border: 1px dashed #e1b6c4; }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.ramo:hover {
-  transform: scale(1.05);
-}
-
-/* ====== MODO OSCURO ====== */
-body.dark {
-  background: #1e1e1e;
-  color: #eee;
-}
-
-body.dark header {
-  background: #333;
-  border-bottom: 3px solid #555;
-}
-
-body.dark .grupo {
-  background: #2b2b2b;
-  box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-}
-
-body.dark .ramo.bloqueado {
-  background: #444;
-  border: 2px dashed #666;
-  color: #999;
-}
-
-body.dark .ramo.disponible {
-  background: #333;
-  border: 2px solid #f497b5;
-  color: #f9c6d9;
-}
-
-body.dark .ramo.aprobado {
-  background: #2d4d2d;
-  border: 2px solid #4CAF50;
-  color: #9fdf9f;
-}
-
-body.dark .barra-progreso {
-  background: #555;
-}
+/* ===== MODO OSCURO ===== */
+body.dark { background: #1e1e1e; color: #eee; }
+body.dark header { background: #333; border-bottom: 3px solid #555; }
+body.dark .grupo { background: #2b2b2b; }
