@@ -1,177 +1,37 @@
-/* ====== RESET BÁSICO ====== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva Medicina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Malla Interactiva - Medicina</h1>
+    <div class="controls">
+      <input type="text" id="buscador" placeholder="Buscar ramo...">
+      <button id="solo-disponibles">Mostrar solo disponibles</button>
+      <button id="reiniciar">Reiniciar progreso</button>
+      <label>
+        🌙 Modo oscuro
+        <input type="checkbox" id="modo-oscuro">
+      </label>
+    </div>
+  </header>
 
-body {
-  background: #fdebf3; /* rosado pastel */
-  color: #333;
-  transition: background 0.3s, color 0.3s;
-}
+  <section class="stats">
+    <p id="total-ramos">Total ramos: 0</p>
+    <p id="aprobados">Aprobados: 0</p>
+    <p id="creditos">Créditos: 0/0</p>
+    <p id="progreso">Progreso: 0%</p>
+    <div class="barra-progreso">
+      <div id="avance"></div>
+    </div>
+  </section>
 
-/* ====== CABECERA ====== */
-header {
-  text-align: center;
-  padding: 1rem;
-  background: #f8c6d8;
-  border-bottom: 3px solid #f497b5;
-}
+  <main id="malla"></main>
 
-header h1 {
-  font-size: 1.8rem;
-  color: #5a2a3c;
-}
-
-.controls {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.controls input[type="text"] {
-  padding: 0.4rem;
-  border: 1px solid #f497b5;
-  border-radius: 6px;
-}
-
-.controls button,
-.controls label {
-  background: #f497b5;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  color: white;
-  font-weight: bold;
-}
-
-.controls button:hover {
-  background: #e67aa1;
-}
-
-/* ====== ESTADÍSTICAS ====== */
-.stats {
-  text-align: center;
-  margin: 1rem 0;
-}
-
-.barra-progreso {
-  background: #f1c6d8;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 80%;
-  height: 20px;
-  margin: 0.5rem auto;
-}
-
-#avance {
-  background: #f497b5;
-  height: 100%;
-  width: 0;
-  transition: width 0.5s;
-}
-
-/* ====== MALLA ====== */
-.grupo {
-  margin: 1.5rem auto;
-  padding: 1rem;
-  max-width: 1000px;
-  background: #fff0f6;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.grupo h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #7a3e57;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.ramo {
-  padding: 0.8rem;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.ramo h3 {
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-}
-
-/* ====== ESTADOS DE RAMOS ====== */
-.ramo.bloqueado {
-  background: #f3d6e0;
-  color: #777;
-  border: 2px dashed #e1b6c4;
-  cursor: not-allowed;
-}
-
-.ramo.disponible {
-  background: #fde2eb;
-  border: 2px solid #f497b5;
-  color: #5a2a3c;
-}
-
-.ramo.aprobado {
-  background: #d6f5d6;
-  border: 2px solid #4CAF50;
-  color: #2e5d2e;
-  text-decoration: line-through;
-}
-
-.ramo:hover {
-  transform: scale(1.05);
-}
-
-/* ====== MODO OSCURO ====== */
-body.dark {
-  background: #1e1e1e;
-  color: #eee;
-}
-
-body.dark header {
-  background: #333;
-  border-bottom: 3px solid #555;
-}
-
-body.dark .grupo {
-  background: #2b2b2b;
-  box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-}
-
-body.dark .ramo.bloqueado {
-  background: #444;
-  border: 2px dashed #666;
-  color: #999;
-}
-
-body.dark .ramo.disponible {
-  background: #333;
-  border: 2px solid #f497b5;
-  color: #f9c6d9;
-}
-
-body.dark .ramo.aprobado {
-  background: #2d4d2d;
-  border: 2px solid #4CAF50;
-  color: #9fdf9f;
-}
-
-body.dark .barra-progreso {
-  background: #555;
-}
+  <script src="script.js"></script>
+</body>
+</html>
