@@ -7,7 +7,10 @@ async function cargarMalla() {
   mallaData = await res.json();
   renderMalla();
   actualizarStats();
-  if (modoOscuro) document.body.classList.add("dark");
+  if (modoOscuro) {
+    document.body.classList.add("dark");
+    document.getElementById("modo-oscuro").checked = true;
+  }
 }
 
 function renderMalla() {
@@ -22,19 +25,24 @@ function renderMalla() {
     titulo.textContent = grupo.grupo;
     divGrupo.appendChild(titulo);
 
-    const grid = document.createElement("div");
-    grid.className = "grid";
-
     grupo.ramos.forEach(ramo => {
       const card = document.createElement("div");
       card.className = "ramo bloqueado";
       card.dataset.sigla = ramo.sigla;
       card.dataset.creditos = ramo.creditos;
 
-      // Título
+      // Nombre + créditos
       const nombre = document.createElement("h3");
       nombre.textContent = `${ramo.asignatura} (${ramo.creditos} CT)`;
       card.appendChild(nombre);
+
+      // Categoría (pastilla de color)
+      if (ramo.categoria) {
+        const cat = document.createElement("span");
+        cat.className = `categoria cat-${ramo.categoria.toLowerCase()}`;
+        cat.textContent = ramo.categoria;
+        card.appendChild(cat);
+      }
 
       // Estado inicial
       if (progreso[ramo.sigla]) {
@@ -48,10 +56,9 @@ function renderMalla() {
       // Click para aprobar/desaprobar
       card.addEventListener("click", () => toggleRamo(ramo.sigla));
 
-      grid.appendChild(card);
+      divGrupo.appendChild(card);
     });
 
-    divGrupo.appendChild(grid);
     contenedor.appendChild(divGrupo);
   });
 }
