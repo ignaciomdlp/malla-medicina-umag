@@ -2,35 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Malla Interactiva Medicina</title>
+  <title>Malla Medicina Interactiva</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Malla Interactiva - Medicina</h1>
-    <div class="controls">
-      <input type="text" id="buscador" placeholder="Buscar ramo...">
-      <button id="solo-disponibles">Mostrar solo disponibles</button>
-      <button id="reiniciar">Reiniciar progreso</button>
-      <label>
-        🌙 Modo oscuro
-        <input type="checkbox" id="modo-oscuro">
-      </label>
-    </div>
-  </header>
 
-  <section class="stats">
-    <p id="total-ramos">Total ramos: 0</p>
-    <p id="aprobados">Aprobados: 0</p>
-    <p id="creditos">Créditos: 0/0</p>
-    <p id="progreso">Progreso: 0%</p>
+    <div class="stats">
+      <span id="total-ramos">Total ramos: 0</span>
+      <span id="aprobados">Aprobados: 0</span>
+      <span id="creditos">Créditos: 0/0</span>
+      <span id="progreso">Progreso: 0%</span>
+    </div>
+
     <div class="barra-progreso">
       <div id="avance"></div>
     </div>
-  </section>
+
+    <div class="controles">
+      <button id="reiniciar">🔄 Reiniciar Progreso</button>
+      <button id="solo-disponibles">Solo Disponibles</button>
+      <input type="text" id="buscador" placeholder="Buscar ramo...">
+      <label class="switch">
+        <input type="checkbox" id="modo-oscuro">
+        <span class="slider">
+          <img src="https://cdn-icons-png.flaticon.com/512/6714/6714978.png" alt="🌙">
+        </span>
+      </label>
+    </div>
+
+    <div id="leyenda">
+      <span class="leyenda aprobado">Aprobado</span>
+      <span class="leyenda disponible">Disponible</span>
+      <span class="leyenda bloqueado">Bloqueado</span>
+    </div>
+  </header>
 
   <main id="malla"></main>
+
+  <footer>
+    <p>Creado por Matus 💖</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
